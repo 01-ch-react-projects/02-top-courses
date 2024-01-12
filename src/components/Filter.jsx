@@ -1,7 +1,13 @@
 import React from 'react'
 
-export const Filter = () => {
+export const Filter = ({filterData}) => {
   return (
-    <div>Filter</div>
+    <div>
+        {
+            filterData.map((data)=>{
+                return <button>{data.title}</button>
+            })
+        }
+    </div>
   )
 }
