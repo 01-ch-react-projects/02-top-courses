@@ -1,7 +1,19 @@
 import React from 'react'
-
-export const Card = () => {
+import {FcLike} from 'react-icons/fc'
+export const Card = ({course}) => {
+  
   return (
-    <div>Card</div>
+    <div>
+      <div>
+        <img src={course.image.url} alt="" />
+        <div>
+          <button><FcLike fontSize="1.75rem"/></button>
+        </div>
+        <div>
+          <p>{course.title}</p>
+          <p>{course.description}</p>
+        </div>
+      </div>
+    </div>
   )
 }

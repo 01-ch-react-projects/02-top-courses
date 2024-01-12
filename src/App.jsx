@@ -9,7 +9,7 @@ import { toast } from 'react-toastify';
 
 function App() {
 
-  const[courses,setCourses]=useState(null)
+  const[courses,setCourses]=useState([])
 
   useEffect( () => {
     const fetchData = async() => {
