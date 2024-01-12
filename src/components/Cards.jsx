@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card } from './Card'
 
-export const Cards = () => {
+export const Cards = ({courses}) => {
   return (
     <div>
         <Card/>
