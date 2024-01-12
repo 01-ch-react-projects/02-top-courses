@@ -19,7 +19,6 @@ function App() {
 
         //save data into course variable
         setCourses(respData.data)
-        // console.log(respData);
       } catch (error) {
         toast.error("Error aa gai")
       }

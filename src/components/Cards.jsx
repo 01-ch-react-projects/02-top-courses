@@ -5,8 +5,8 @@ export const Cards = ({courses}) => {
   const allCourses=[];
   
   let getCourses=()=>{
-    Object.values(courses).forEach(array=>{
-      array.forEach((courseData)=>{
+    Object.values(courses).forEach(arr=>{
+      arr.forEach((courseData)=>{
         allCourses.push(courseData);
       })
     })

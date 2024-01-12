@@ -7,11 +7,11 @@ export const Card = ({course}) => {
       <div>
         <img src={course.image.url} alt="" />
         <div>
-          <button><FcLike fontSize="1.75rem"/></button>
+            <button><FcLike fontSize="1.75rem"/></button>
         </div>
         <div>
-          <p>{course.title}</p>
-          <p>{course.description}</p>
+            <p>{course.title}</p>
+            <p>{course.description}</p>
         </div>
       </div>
     </div>
