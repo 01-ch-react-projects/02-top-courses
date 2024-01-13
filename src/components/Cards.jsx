@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
 import { Card } from './Card'
 
-export const Cards = ({courses}) => {
+export const Cards = ({courses,category}) => {
   const[likedCourses,setLikedCourses]=useState([])
 
   const allCourses=[];
   
   let getCourses=()=>{
-    Object.values(courses).forEach(arr=>{
-      arr.forEach((courseData)=>{
-        allCourses.push(courseData);
-      })
-    })
-    return allCourses;
-  }
+    
+    if(category=='All'){
+        Object.values(courses).forEach(arr=>{
+          arr.forEach((courseData)=>{
+            allCourses.push(courseData);
+          })
+        })
+        return allCourses;
+    }
+    else{
+      return courses[category]
+    }
+}
 
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-4">
