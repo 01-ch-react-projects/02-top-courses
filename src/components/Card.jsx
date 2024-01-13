@@ -5,7 +5,7 @@ export const Card = ({course,likedCourses,setLikedCourses}) => {
   
   function clickHandler(){
     if(likedCourses.includes(course.id)){
-      setLikedCourses((prevState)=>prevState.filter(cid=> (cid!==course.id)))
+      setLikedCourses((prevState)=>prevState.filter(cid => cid!==course.id))
       toast.warning("Removed liked")
     }
     else{
@@ -33,7 +33,11 @@ export const Card = ({course,likedCourses,setLikedCourses}) => {
         </div>
         <div className='p-4 bg-slate-700'>
             <p className="text-white font-semibold text-lg leading-6">{course.title}</p>
-            <p className='mt-2 text-white'>{course.description}</p>
+            <p className='mt-2 text-white'>
+              {
+                course.description.length>100 ? (course.description.substr(0,100))+"..." : (course.description)
+              }
+            </p>
         </div>
       </div>
     </div>
